@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  aggregator:
+    build: .
+    ports: ["8080:8080"]
+    volumes:
+      - aggdata:/app/data
+  publisher:
+    image: python:3.11-slim
+    depends_on: [aggregator]
+    command: python /app/src/publisher_sim.py
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+volumes:
+  aggdata:
