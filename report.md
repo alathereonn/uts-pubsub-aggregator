@@ -36,3 +36,5 @@ Ordering praktis via timestamp + counter (tanpa global total order) (Tanenbaum &
 Retry + backoff pada message-queuing (Tanenbaum & Van Steen, 2023, hlm. 206–220). 
 Arsitektur: 
 Publisher to Broker/Exchange to Queue (durable) to Idempotent Aggregator (dedup store) to Sink/Analytics; metrics endpoint untuk observabilitas (Tanenbaum & Van Steen, 2023, hlm. 72–85; Tanenbaum & Van Steen, 2023, hlm. 408–430).
+
+Tanenbaum, A. S., & Van Steen, M. (2023). Distributed systems (Edisi ke-4). Addison-Wesley.
