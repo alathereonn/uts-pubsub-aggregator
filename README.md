@@ -5,7 +5,6 @@
 <br>docker build -t uts-aggregator .
 <br>docker run -p 8080:8080 uts-aggregator
 Tunjukkan log Uvicorn: “Uvicorn running on http://0.0.0.0:8080”
-
 <br>Bonus: Docker Compose:
 <br>docker compose up --build
 
@@ -13,19 +12,18 @@ Tunjukkan log Uvicorn: “Uvicorn running on http://0.0.0.0:8080”
 http://localhost:8080/docs
 
 <br>a. POST /publish → kirim batch (2 duplikat + 1 unik):
-{
+<br>{
   "events":[
     {"topic":"logs.appA","event_id":"event-0002","timestamp":"2025-01-01T01:00:00Z","source":"cli","payload":{"level":"info","msg":"first log"}},
     {"topic":"logs.appA","event_id":"event-0002","timestamp":"2025-01-01T01:00:00Z","source":"cli","payload":{"level":"info","msg":"duplicate log"}},
     {"topic":"logs.appA","event_id":"event-0003","timestamp":"2025-01-01T02:00:00Z","source":"cli","payload":{"level":"warn","msg":"another event"}}
   ]
 }
-
 <br>b. GET /stats 
 <br>c. GET /events?topic=logs.appA, hanya 2 baris unik: event-0002 & event-0003.
 
 3. Test Duplikasi Sederhana:
-$body = @{
+<br>$body = @{
   events = @(
     @{
       topic="logs.appA"; event_id="event-0002"; timestamp="2025-01-01T01:00:00Z"; source="cli";
