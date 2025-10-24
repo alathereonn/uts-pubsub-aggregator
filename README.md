@@ -1,13 +1,12 @@
-# Idempotent Pub-Sub Log Aggregator (Python + FastAPI)
+## Idempotent Pub-Sub Log Aggregator (Python + FastAPI)
 
-# Step-by-steps:
+## Step-by-steps:
 1. Run and Build Docker:
-docker build -t uts-aggregator .
-docker run -p 8080:8080 uts-aggregator
-
+<br>docker build -t uts-aggregator .
+<br>docker run -p 8080:8080 uts-aggregator
 Tunjukkan log Uvicorn: “Uvicorn running on http://0.0.0.0:8080”
 
-Bonus: Docker Compose:
+#Bonus: Docker Compose:
 docker compose up --build
 
 2. Lihat OpenAPI Docs:
