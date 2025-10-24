@@ -1,6 +1,6 @@
 ## Idempotent Pub-Sub Log Aggregator (Python + FastAPI)
 ## Link Video Youtube: https://youtu.be/5IFNaC8BkKE
-##Link Laporan: https://docs.google.com/document/d/1BHtImgk02e76U_YR2BzAe345ZhnQULDb61GZBYEssXA/edit?usp=sharing
+## Link Laporan: https://docs.google.com/document/d/1BHtImgk02e76U_YR2BzAe345ZhnQULDb61GZBYEssXA/edit?usp=sharing
 ## Step-by-steps:
 1. Run and Build Docker:
 <br>docker build -t uts-aggregator .
