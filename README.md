@@ -6,13 +6,13 @@
 <br>docker run -p 8080:8080 uts-aggregator
 Tunjukkan log Uvicorn: “Uvicorn running on http://0.0.0.0:8080”
 
-#Bonus: Docker Compose:
-docker compose up --build
+<br>Bonus: Docker Compose:
+<br>docker compose up --build
 
 2. Lihat OpenAPI Docs:
 http://localhost:8080/docs
 
-a. POST /publish → kirim batch (2 duplikat + 1 unik):
+<br>a. POST /publish → kirim batch (2 duplikat + 1 unik):
 {
   "events":[
     {"topic":"logs.appA","event_id":"event-0002","timestamp":"2025-01-01T01:00:00Z","source":"cli","payload":{"level":"info","msg":"first log"}},
@@ -21,8 +21,8 @@ a. POST /publish → kirim batch (2 duplikat + 1 unik):
   ]
 }
 
-b. GET /stats 
-c. GET /events?topic=logs.appA, hanya 2 baris unik: event-0002 & event-0003.
+<br>b. GET /stats 
+<br>c. GET /events?topic=logs.appA, hanya 2 baris unik: event-0002 & event-0003.
 
 3. Test Duplikasi Sederhana:
 $body = @{
